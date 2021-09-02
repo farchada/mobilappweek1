@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappweek1/config/constant.dart';
+import 'package:mobileappweek1/screen/login.dart';
 
 class Index extends StatelessWidget {
   @override
@@ -41,7 +43,7 @@ class Index extends StatelessWidget {
                 Text(
                   "Welcome to KMUTNB",
                   style: TextStyle(
-                    color: Colors.amber[900],
+                    color: pColor,
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
                   ),
@@ -57,7 +59,7 @@ class Index extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.amber[900],
+                    primary: tColor,
                     padding: EdgeInsets.fromLTRB(120, 15, 120, 15),
                     shape: StadiumBorder(),
                   ),
@@ -69,6 +71,7 @@ class Index extends StatelessWidget {
                   ),
                   onPressed: () {
                     print("object");
+                     Navigator.pushNamed(context, 'Login');
                   },   
                 ),
                 SizedBox(
@@ -76,7 +79,7 @@ class Index extends StatelessWidget {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.amber[900],
+                    primary: tColor,
                     padding: EdgeInsets.fromLTRB(105, 15, 120, 15),
                     shape: StadiumBorder(),
                   ),
@@ -88,6 +91,8 @@ class Index extends StatelessWidget {
                   ),
                   onPressed: () {
                     print("object");
+                     Navigator.pushNamed(context, 'register');
+                   
                   },
                 ),
               ],
